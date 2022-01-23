@@ -44,7 +44,7 @@ test 2
 2. Navigate to the publishing source for your site. For more information about publishing sources, see "About GitHub Pages."
 3. Run bundle install.
 4. Run your Jekyll site locally.
-´´´
+```
 $ bundle exec jekyll serve
 > Configuration file: /Users/octocat/my-site/_config.yml
 >            Source: /Users/octocat/my-site
@@ -56,5 +56,5 @@ $ bundle exec jekyll serve
 > Configuration file: /Users/octocat/my-site/_config.yml
 >    Server address: http://127.0.0.1:4000/
 >  Server running... press ctrl-c to stop.
-´´´
+```
 5. To preview your site, in your web browser, navigate to http://localhost:4000.
