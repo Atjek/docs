@@ -58,3 +58,10 @@ $ bundle exec jekyll serve
 >  Server running... press ctrl-c to stop.
 ```
 5. To preview your site, in your web browser, navigate to http://localhost:4000.
+
+
+## Run localy using docker
+
+```
+docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" --env JEKYLL_ENV=development -p 4000:4000 jekyll/jekyll:3.8 jekyll serve
+```
