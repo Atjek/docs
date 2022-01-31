@@ -1,27 +1,31 @@
 ---
 layout: default
-title: Switchboard
-nav_order: 2
+title: Calculate circuit
+nav_order: 3
 parent : Short circuit
 grand_parent : API
 ---
 
 # Switchboard
-Will do a short circuit calculation of a switchboard with multiple incomming supplyes. Eg one og more generators.
+Will do a short circuit calculation of one or more circuits
 
 ### Request
 You need to send a POST request with the following style example 
 ```
-https://api.atjek.com/shortCircuit/switchBoard/
+https://api.atjek.com/shortCircuit/net/multiple/
 ```
 
 ### parameters 
 
 | Parameter              | Type              | Required ? | Description  |
 |------------------------|-------------------|------------|--------------|
-| `circuits`             | Array object      | Yes        | Array object of the circuit with equipment connected to the circuit in series. |
+| `netType`              | Number            | Yes        | Number representation of net type of circuit. |
+| `switchBoard`          | Object            | Yes        | You will need to pass by a switchBoard object witch have a `voltage`, `ik3Ik3pmaxInput`, `cosPhiMaxInput`,`ik2pminInput`,`cosPhiMinInput` property | 
+| `circuits`             | Array object      | Yes        | An circuit object who has at least the following property `loadIn` |
+| `cables`               | Array object      | No         | You can pass an Array oject of all cables assosiated with the circuit. And we will find the correct resistance and reactance of the cable if equipmentID is set correct in the eqipment parameter for the circuit. If not we will use `equipment.r`, `equpment.xd`, `equipment.rpeCable`, `equipment.xpeCable` and multiple it with `equipment.cableLength` | 
 
 ### Response
+The response wil be a complete circuits array object with an added .shortCircuitCalculation property. 
 You will get a response `Object` with the following data:
 
 | Field              | Type              | Description  |
