@@ -24,4 +24,4 @@ An equipment can be
 3. switch
 
 
-(PICTURE OF SWITCHBOARD)
+<img src="img/singleline.png" alt="drawing"/>
