@@ -32,6 +32,7 @@ You will get a response `Object` with the following data:
 | `transformerProducer` | Array object      | Object array of available transformer producers with ID and name.  | 
 | `transformerType`     | Array object      | Object array of types from producers.                              |
 | `transformerCoupling` | Array object      | Object array of available transformer coupling types               |
+| `transformerfrequency`| Array object      | Object array of available transformer frequency                    | 
 
 ### Example response
 ```
@@ -56,6 +57,16 @@ You will get a response `Object` with the following data:
         {
             "id": 1,
             "name": "Dyn11"
+        }
+    ],
+    "transformerfrequency": [
+        {
+            "frequency": 50,
+            "COUNT(frequency)": 1
+        },
+        {
+            "frequency": 60,
+            "COUNT(frequency)": 1
         }
     ]
 }

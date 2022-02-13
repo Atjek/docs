@@ -22,6 +22,8 @@ https://api.atjek.com/transformer/list
 | `countryFilter`        | Array             | No         | Array of MySQL table ID of country ID to filter from.                         |
 | `producerFilter`       | Array             | No         | Array of MySQL table ID of producers to filter from.                          |
 | `typeFilter`           | Array             | No         | Array of MySQL table ID of country ID to filter from.                         | 
+| `frequencyFilter`      | Array             | No         | Array of frequency to filter from                                             |
+| `voltageFilter`        | Number            | No         | If added, will only select transformer with primary_voltage_min < INPUT and primary_voltage_max > INPUT |
 | `IDFilter`             | Array             | No         | Array of mySQL table ID of fuse ID you wan to include in return response. Normaly this is used when we want only to get information from a single transformer |
 
 The parameters needs to be passed inside an `option` object. 
